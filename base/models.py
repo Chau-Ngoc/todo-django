@@ -13,13 +13,13 @@ class Task(models.Model):
     title = models.CharField(max_length=200, null=True, blank=True)
     language = models.CharField(max_length=100, null=True, blank=True)
     write = models.IntegerField(
-        validators=score_validators, null=True, blank=True
+        validators=score_validators, null=True, blank=True, default=0
     )
     listen = models.IntegerField(
-        validators=score_validators, null=True, blank=True
+        validators=score_validators, null=True, blank=True, default=0
     )
     speak = models.IntegerField(
-        validators=score_validators, null=True, blank=True
+        validators=score_validators, null=True, blank=True, default=0
     )
     score = models.FloatField()
     fulfilled = models.BooleanField(default=False)

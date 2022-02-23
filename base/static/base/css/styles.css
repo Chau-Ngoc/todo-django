@@ -1,0 +1,100 @@
+body {
+	font-family: "Nunito", sans-serif;
+	background-color: #fff6e4;
+	padding: 5%;
+	margin: 2rem 1rem;
+}
+
+a,
+p {
+	color: #292929;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover,
+a:active {
+	color: #4b76ec;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="password"],
+textarea {
+	border: 1px solid #f15424;
+	border-radius: 5px;
+	padding: 10px;
+	width: 90%;
+}
+
+.container {
+	max-width: 500px;
+	border-radius: 10px;
+	/* padding: 2rem; */
+	margin: auto;
+	background-color: #fdf8e2;
+	box-shadow: 2px 2px 4px 4px #3d3d3d70;
+}
+
+.header-bar {
+	display: flex;
+	justify-content: space-between;
+	color: antiquewhite;
+	padding: 10px;
+	border-radius: 10px 10px 0 0;
+	background: linear-gradient(90deg, #ecac63 0%, #ff9152 30%, #ff7138 100%);
+}
+
+.header-bar a {
+	color: antiquewhite;
+}
+
+.task-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+	background-color: #f5e5a1;
+	border-top: 1px solid #c4c3b0;
+}
+
+.task-title {
+	display: flex;
+}
+
+.task-title a {
+	margin-left: 10px;
+}
+
+.task-complete-icon {
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	background-color: #96f04c;
+}
+
+.task-incomplete-icon {
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	background-color: #9e9d9d;
+}
+
+/* .delete-link {
+	text-decoration: none;
+	color: #f15424;
+} */
+
+.form-body {
+	padding: 10%;
+}
+
+.button {
+    border: 1px solid #5a5a5a;
+    background-color: #f5e5a1;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}

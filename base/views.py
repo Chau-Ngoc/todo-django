@@ -55,31 +55,35 @@ class TaskList(LoginRequiredMixin, ListView):
         return context
 
 
-class TaskCreate(LoginRequiredMixin, CreateView):
-    model = Task
-    fields = [
-        "title",
-        "language",
-        "write",
-        "speak",
-        "listen",
-        "fulfilled",
-    ]
-    success_url = reverse_lazy("tasks")
-
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super().form_valid(form)
-
-
 class TaskUpdate(LoginRequiredMixin, UpdateView):
     model = Task
     fields = ["speak", "write", "listen", "fulfilled"]
     success_url = reverse_lazy("tasks")
 
+# ----------------------------------------------------------------
+# Since only the admin can create and delete a task, 
+# the TaskCreate and TaskDelete views won't be neccessary
+# ----------------------------------------------------------------
 
-class TaskDelete(LoginRequiredMixin, DeleteView):
-    model = Task
-    context_object_name = "task"
-    success_url = reverse_lazy("tasks")
-    template_name = "base/task_delete.html"
+# class TaskCreate(LoginRequiredMixin, CreateView):
+#     model = Task
+#     fields = [
+#         "title",
+#         "language",
+#         "write",
+#         "speak",
+#         "listen",
+#         "fulfilled",
+#     ]
+#     success_url = reverse_lazy("tasks")
+
+#     def form_valid(self, form):
+#         form.instance.user = self.request.user
+#         return super().form_valid(form)
+
+
+# class TaskDelete(LoginRequiredMixin, DeleteView):
+#     model = Task
+#     context_object_name = "task"
+#     success_url = reverse_lazy("tasks")
+#     template_name = "base/task_delete.html"
